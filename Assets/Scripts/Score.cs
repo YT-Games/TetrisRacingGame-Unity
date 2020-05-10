@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
     [SerializeField] GameManager gm;
-    [SerializeField] Text scoreText;
-    int s = 0;
+    [SerializeField] TextMeshProUGUI scoreText;
+
     // Update is called once per frame
     void Update()   
     {

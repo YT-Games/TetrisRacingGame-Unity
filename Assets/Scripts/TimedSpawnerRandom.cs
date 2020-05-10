@@ -23,7 +23,7 @@ public class TimedSpawnerRandom: MonoBehaviour {
                 transform.position.y+1,
                 transform.position.z);
             GameObject newObject = Instantiate(prefabToSpawn.gameObject, positionOfSpawnedObject, Quaternion.Euler(0, -180, 0));
-            if (prefabToSpawn.forwardForce < 200)
+            if (prefabToSpawn.forwardForce < 250)
             {
                 prefabToSpawn.forwardForce += prefabToSpawn.forwardForce * Time.deltaTime;
             }
