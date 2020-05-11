@@ -8,10 +8,14 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Enemy" || collision.collider.tag == "EnemyRed")
+        if (collision.collider.tag == "Enemy")
         {
             Debug.Log("Hit!!");
             FindObjectOfType<GameManager>().EndGame();
+        }
+        if (collision.collider.tag == "Shield")
+        {
+            Debug.Log("Shield!!");
         }
     }
 }

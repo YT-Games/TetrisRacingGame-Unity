@@ -6,8 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Ground
-  - EnemyYellow
-  - EnemyRed
+  - Shield
   layers:
   - Default
   - TransparentFX

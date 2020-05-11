@@ -122,6 +122,56 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &7340281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7340283}
+  - component: {fileID: 7340282}
+  m_Layer: 0
+  m_Name: ShieldSpawner
+  m_TagString: Shield
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &7340282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6374b7f409d5c2740af0534bf383570c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: 7151361492559839543, guid: e8a73ef0ef9065a44babfd77efa0befe,
+    type: 3}
+  gm: {fileID: 110026644}
+  startSpawn: 1
+  minTimeBetweenSpawns: 1
+  maxTimeBetweenSpawns: 3
+  maxXDistance: 15
+--- !u!4 &7340283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340281}
+  m_LocalRotation: {x: 0.0017278768, y: 0.000003588833, z: -0.0020770114, w: 0.99999636}
+  m_LocalPosition: {x: 0, y: 1, z: 220}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0.19800001, y: 0, z: -0.238}
 --- !u!1 &102463990
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +236,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &110026642
 GameObject:
@@ -576,7 +626,7 @@ RectTransform:
   m_Children:
   - {fileID: 380914168}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -794,7 +844,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 3
 --- !u!65 &1096884077
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1038,7 +1088,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1710744875}
-  - component: {fileID: 1710744874}
+  - component: {fileID: 1710744876}
   m_Layer: 0
   m_Name: EnemySpawnerBlue
   m_TagString: Enemy
@@ -1046,24 +1096,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1710744874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710744873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f724943d92b29c747a2d611e747183a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 1646248599201709309, guid: a191edd7a56621b4db3ec5b80711225c,
-    type: 3}
-  gm: {fileID: 110026644}
-  minTimeBetweenSpawns: 0.3
-  maxTimeBetweenSpawns: 1
-  maxXDistance: 15
 --- !u!4 &1710744875
 Transform:
   m_ObjectHideFlags: 0
@@ -1078,6 +1110,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0.19800001, y: 0, z: -0.238}
+--- !u!114 &1710744876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710744873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2399874780a64f43acc79eb4cac0d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: 1646248599201709309, guid: a191edd7a56621b4db3ec5b80711225c,
+    type: 3}
+  gm: {fileID: 110026644}
+  startSpawn: 1
+  minTimeBetweenSpawns: 0.3
+  maxTimeBetweenSpawns: 1
+  maxXDistance: 15
 --- !u!1 &1957691614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,7 +1141,7 @@ GameObject:
   - component: {fileID: 1957691615}
   m_Layer: 0
   m_Name: EnemySpawnerRed
-  m_TagString: EnemyRed
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1104,12 +1155,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1957691614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f724943d92b29c747a2d611e747183a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 1829474c24f889f4083e23356b89be94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 8570675516748932296, guid: 8f2bf218ad944454e84698cd1e7d3f6b,
     type: 3}
   gm: {fileID: 110026644}
+  startSpawn: 70
   minTimeBetweenSpawns: 0.7
   maxTimeBetweenSpawns: 1
   maxXDistance: 15
@@ -1159,6 +1211,7 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 4634293277842486158, guid: 4242630d19354524b8991a4b11708369,
     type: 3}
   gm: {fileID: 110026644}
+  startSpawn: 30
   minTimeBetweenSpawns: 0.5
   maxTimeBetweenSpawns: 1
   maxXDistance: 15
