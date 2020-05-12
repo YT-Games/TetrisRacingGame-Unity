@@ -26,7 +26,7 @@ public class SpawnerShield : MonoBehaviour
             yield return new WaitForSeconds(timeBetweenSpawns);
             Vector3 positionOfSpawnedObject = new Vector3(
                 transform.position.x + Random.Range(-maxXDistance, +maxXDistance),
-                transform.position.y + 1,
+                transform.position.y,
                 transform.position.z);
             if (Time.timeSinceLevelLoad > startSpawn)
             {

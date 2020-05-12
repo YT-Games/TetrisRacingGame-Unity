@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     [SerializeField] CircleShieldController prefabToSpawn;
+    [SerializeField] Animator anim;
     GameObject newObject;
     private bool HaveShild = false;
     float counter = 0;
@@ -14,18 +15,22 @@ public class PlayerCollision : MonoBehaviour
         if (collision.collider.tag == "Enemy" && !HaveShild)
         {
             Debug.Log("Hit!!");
+            anim.SetBool("Explosion", true);
             FindObjectOfType<GameManager>().EndGame();
-        }else if (collision.collider.tag == "Enemy" && HaveShild)
+        }
+        else if (collision.collider.tag == "Enemy" && HaveShild)
         {
             HaveShild = false;
             Debug.Log("We have shild!!");
-        }else if (collision.collider.tag == "Shield" && !HaveShild)
+        }
+        else if (collision.collider.tag == "Shield" && !HaveShild)
         {
-            HaveShild = true;
-            ActivateShild();
             Destroy(collision.gameObject);
+            ActivateShild();
+            HaveShild = true;
             
-        }else if(collision.collider.tag == "Shield" && HaveShild)
+        }
+        else if(collision.collider.tag == "Shield" && HaveShild)
         {
             Debug.Log("We allready have shild");
         }
