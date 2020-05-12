@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     [SerializeField] CircleShieldController prefabToSpawn;
+    GameObject newObject;
     private bool HaveShild = false;
+    float counter = 0;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -21,6 +23,7 @@ public class PlayerCollision : MonoBehaviour
         {
             HaveShild = true;
             ActivateShild();
+            Destroy(collision.gameObject);
             
         }else if(collision.collider.tag == "Shield" && HaveShild)
         {
@@ -32,11 +35,24 @@ public class PlayerCollision : MonoBehaviour
     {
         Debug.Log("We got a shild");
         Vector3 positionOfPlayerObject = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
-        GameObject newObject = Instantiate(prefabToSpawn.gameObject, positionOfPlayerObject, Quaternion.Euler(0,0,0));
+        newObject = Instantiate(prefabToSpawn.gameObject, positionOfPlayerObject, Quaternion.Euler(0,0,0));
     }
 
     private void CancelShild()
     {
         
+    }
+    void FixedUpdate()
+    {
+        if (HaveShild == true)
+        {
+            counter += Time.deltaTime;
+            if (counter > 10)
+            {
+                counter = 0;
+                Destroy(newObject);
+                HaveShild = false;
+            }
+        }
     }
 }
