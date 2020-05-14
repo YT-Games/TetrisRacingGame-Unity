@@ -95,6 +95,12 @@ Here is the code:
 
 There are three types of enemies(red, yellow, blue).
 
+The first car of any kind will start arriving at another time.
+
+After the first car, the rest of the cars will randomly come beetwin minimum to maximum seconds.
+
+As time goes on, cars will be faster.
+
 Here is the code:
 ```
     void Start()
