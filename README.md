@@ -53,6 +53,8 @@ There are 4 cases here:
 
 * If the player hit another car without a shield (Game Over).
 
+![explode](https://user-images.githubusercontent.com/45067010/81975839-4ba62e00-9630-11ea-90c7-96afce2cb383.png)
+
 * If the player hit another car with a shield (the shield will protect the player).
 
 * If the player hit the shield and didn't already have a shield (he will activate a shield).
