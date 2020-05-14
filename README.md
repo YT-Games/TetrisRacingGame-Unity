@@ -5,11 +5,13 @@ Created by:
 
 Yotam dafna
 
-Tomer Hazan
+Tomer hazan
 
 # Game description: 
 A car game, where the player's goal is to evade the cars coming towards him over time.
+
 As time goes on, the speed of the cars coming in his direction increases.
+
 If the player takes a shield he will be protected for 10 seconds.
 
 # picture of the game 
@@ -27,7 +29,6 @@ This code is for player movement:
  if (Input.GetKey(KeyCode.LeftArrow))
         {
             rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
-
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
