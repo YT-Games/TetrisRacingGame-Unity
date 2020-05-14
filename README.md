@@ -25,14 +25,14 @@ The player movement is Left or Right (using the arrows keys).
 * Right key – the player will move right.
 
 This code is for player movement:
-'''
- if (Input.GetKey(KeyCode.LeftArrow))
+```
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
-'''
-
+```
