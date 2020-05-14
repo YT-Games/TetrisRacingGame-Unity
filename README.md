@@ -1,2 +1,3 @@
 # Gamedev-07-q2
-bla bla bla
+Contains the second question (adding dramatic components): gamedev-5780
+Created by:
