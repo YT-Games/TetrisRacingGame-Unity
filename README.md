@@ -133,6 +133,11 @@ Here is the code:
         }
     }
 ```
+
+# Animation
+
+When the player collides with the enemy and has no shield, there is an explosion.
+
 # Audio
 
 The game has one background music:
