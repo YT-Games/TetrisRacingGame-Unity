@@ -55,6 +55,8 @@ There are 4 cases here:
 
 * If the player hit the shield and didn't already have a shield (he will activate a shield).
 
+![shield](https://user-images.githubusercontent.com/45067010/81975637-03870b80-9630-11ea-94fd-1b60f98664db.png)
+
 * If the player hit the shield and he already had a shield (nothing will happend).
 
 Here is the code:
