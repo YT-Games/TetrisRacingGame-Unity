@@ -14,7 +14,7 @@ As time goes on, the speed of the cars coming in his direction increases.
 
 If the player takes a shield he will be protected for 10 seconds.
 
-# picture of the game 
+![Game](https://user-images.githubusercontent.com/45067010/81974899-e4d44500-962e-11ea-8571-9170156c2b96.png)
 
 # The player
 
