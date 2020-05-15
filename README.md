@@ -144,6 +144,9 @@ Here is the code:
 
 When the player collides with the enemy and has no shield, there is an explosion.
 
+![WhatsApp Image 2020-05-14 at 22 27 21](https://user-images.githubusercontent.com/45067010/82049528-244a7200-96bf-11ea-9b36-9937e8caf7c8.jpeg)
+
+
 # Audio
 
 The game has one background music:
